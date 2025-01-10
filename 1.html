@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <title>笑袋寡一路走好，愿天堂没有抄如袭</title> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body id="v1">
+  <div id="app"></div>
+  <script>
+    new Vue({
+      el: '#app',
+      template: `
+        <div>
+          <img src="./assets/images/ylzh.png" alt="TP1" class="fullscreen-image">
+          <img src="./assets/images/ctad.png" alt="TP2" class="fullscreen-image">
+          <div class="music-container">
+            <h1>愿天堂没有小河粉</h1>
+            <audio id="background-music" src="./assets/music/ay.mp3" autoplay loop>
+              您的浏览器不支持 audio 元素
+            </audio>
+            <button id="music-control">暂停音乐</button>
+            <button id="xyy" onclick="window.location.href='./2.html'" >下一页</button>
+          </div>
+          <div style="text-align: center; margin-top: 20px; font-family: Arial, sans-serif; color: #333;">
+            © 朵拉版权所有
+          </div>
+        </div>
+      `
+    });
+  </script> 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body > * {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+      -webkit-filter: grayscale(1);
+    }
+
+    .fullscreen-image {
+      width: 100%;
+      height: auto; 
+      object-fit: contain; 
+      display: block;
+      max-width: 100%; 
+      max-height: 100vh; 
+      margin: 0 auto;
+    }
+
+    .fullscreen-image-container {
+      padding: 10px; 
+      box-sizing: border-box;
+    }
+    
+    .music-container {
+      text-align: center;
+    }
+    .music-container h1 {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    /* 可选：添加一个简单的按钮样式 */
+    .music-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    
+    .xyy button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</body>
+</html>

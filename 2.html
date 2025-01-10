@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <title>heheda一路走好，下辈子不做小河粉</title> 
+  <script src="js/jq.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const music = document.getElementById('background-music');
+      const controlButton = document.getElementById('music-control');
+
+
+      music.play().catch(error => {
+        music.muted = true;
+        music.play();
+      });
+
+      controlButton.addEventListener('click', () => {
+        if (music.paused) {
+          music.play();
+          controlButton.textContent = '暂停音乐';
+        } else {
+          music.pause();
+          controlButton.textContent = '播放音乐';
+        }
+      });
+    });
+  </script> 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body > * {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+      -webkit-filter: grayscale(1);
+    }
+
+    .fullscreen-image {
+      width: 100%;
+      height: auto; 
+      object-fit: contain; 
+      display: block;
+      max-width: 100%; 
+      max-height: 100vh; 
+      margin: 0 auto;
+    }
+
+    .fullscreen-image-container {
+      padding: 10px; 
+      box-sizing: border-box;
+    }
+    
+    .music-container {
+      text-align: center;
+    }
+    .music-container h1 {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .music-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    
+    .syy button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    
+    
+  </style>
+</head>
+<body id="v1">
+
+  <img src="./assets/images/hhdylzg.png" alt="TP1" class="fullscreen-image">
+  <img src="./assets/images/maaa.png" alt="TP2" class="fullscreen-image">
+  
+  <div class="music-container">
+    <h1>愿下辈子做个真爱粉</h1>
+    <audio id="background-music" src="./assets/music/ay.mp3" autoplay loop>
+      你吗死了
+    </audio>
+    <button id="music-control">暂停音乐</button>
+    
+  <div>
+      <button id="syy" onclick="window.location.href='./index.html'" >上一页</button>
+  </div>
+  
+  
+  </div>
+  
+  
+  <div style="text-align: center; margin-top: 20px; font-family: Arial, sans-serif; color: #333;">
+    ©2024 小呆瓜版权所有
+  </div>
+  
+</body>
+</html>
